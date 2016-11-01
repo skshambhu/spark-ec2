@@ -453,9 +453,11 @@ EC2_INSTANCE_TYPES = {
 }
 
 
-def get_tachyon_version(spark_version):
-    return SPARK_TACHYON_MAP.get(spark_version, "")
+#def get_tachyon_version(spark_version):
+ #   return SPARK_TACHYON_MAP.get(spark_version, "")
 
+def get_tachyon_version(spark_version):
+    return "0.8.2"
 
 # Attempt to resolve an appropriate AMI given the architecture and region of the request.
 def get_spark_ami(opts):
