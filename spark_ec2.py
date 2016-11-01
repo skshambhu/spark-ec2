@@ -51,7 +51,7 @@ else:
     raw_input = input
     xrange = range
 
-SPARK_EC2_VERSION = "1.6.0"
+SPARK_EC2_VERSION = "1.6.2"
 SPARK_EC2_DIR = os.path.dirname(os.path.realpath(__file__))
 
 VALID_SPARK_VERSIONS = set([
@@ -453,11 +453,9 @@ EC2_INSTANCE_TYPES = {
 }
 
 
-#def get_tachyon_version(spark_version):
- #   return SPARK_TACHYON_MAP.get(spark_version, "")
-
 def get_tachyon_version(spark_version):
-    return "0.8.2"
+    return SPARK_TACHYON_MAP.get(spark_version, "")
+
 
 # Attempt to resolve an appropriate AMI given the architecture and region of the request.
 def get_spark_ami(opts):
